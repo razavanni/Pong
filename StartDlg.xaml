@@ -1,0 +1,30 @@
+﻿<Window x:Class="DlgMenuDemo.StartDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DlgMenuDemo"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Pong! By Razvan" Height="266" Width="298.754" ResizeMode="NoResize" WindowStyle="ThreeDBorderWindow">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF001BFF"/>
+            <GradientStop Color="#FF42FF00" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Canvas Margin="0,0,0,147">
+        <Label Content="Radius" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="17" Canvas.Top="32"/>
+        <TextBox x:Name="radius" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Canvas.Left="71" Canvas.Top="35" Text="10" GotFocus="GotFocus" />
+        <Button x:Name="OK" Content="OK" Canvas.Left="17" Canvas.Top="181" Width="75" Click="OK_Click" IsDefault="True" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button x:Name="cancel" Content="Cancel" Canvas.Left="159" Canvas.Top="181" Width="75" IsCancel="True"/>
+        <Label Content="(0 &lt; Radius &lt; 101 px)" Canvas.Left="123" Canvas.Top="32"/>
+        <Label Content="Speed x" Canvas.Left="17" Canvas.Top="63"/>
+        <TextBox x:Name="vx" Height="23" Canvas.Left="71" TextWrapping="Wrap" Text="200" Canvas.Top="67" Width="35" GotFocus="GotFocus"/>
+        <Label Content="(0 &lt; Speed x &lt; 2001 px/s)" Canvas.Left="123" Canvas.Top="63"/>
+        <Label Content="Speed y" Canvas.Left="17" Canvas.Top="96"/>
+        <TextBox x:Name="vy" Height="23" Canvas.Left="71" TextWrapping="Wrap" Text="200" Canvas.Top="100" Width="35" RenderTransformOrigin="0.204,0.829" GotFocus="GotFocus"/>
+        <Label Content="(0 &lt; Speed y &lt; 2001 px/s)" Canvas.Left="123" Canvas.Top="96"/>
+        <CheckBox x:Name="ccde" Content="Fehler bei der Kollisionserkennung beheben" Canvas.Left="22" Canvas.Top="133" IsChecked="True"/>
+        <CheckBox x:Name="autoplayer_check" Content="Rechter Paddle Automatisch bewegen" Canvas.Left="22" Canvas.Top="153" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+    </Canvas>
+</Window>
